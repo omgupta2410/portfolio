@@ -1,17 +1,33 @@
 // === Admin Mode (add ?edit=true to URL to show Add Work panel) ===
 const isAdmin = new URLSearchParams(window.location.search).get('edit') === 'true';
 
-// === Storage ===
-const STORAGE_KEY = 'om_portfolio_works';
+// === Cloud Storage (npoint.io - works across all browsers) ===
+const API_URL = 'https://api.npoint.io/665a22ef778614d19aea';
+let worksCache = [];
 
-function getWorks() {
+async function fetchWorks() {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-  } catch { return []; }
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    worksCache = Array.isArray(data) ? data : [];
+  } catch {
+    worksCache = [];
+  }
+  return worksCache;
 }
 
-function saveWorks(works) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(works));
+async function saveWorks(works) {
+  worksCache = works;
+  try {
+    await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(works)
+    });
+  } catch (e) {
+    console.error('Failed to save:', e);
+    alert('Failed to save. Please try again.');
+  }
 }
 
 // === URL Parsing ===
@@ -62,7 +78,7 @@ function parseVideoUrl(url) {
 // === Render Work Cards ===
 function renderWorks(filter = 'all') {
   const grid = document.getElementById('workGrid');
-  const works = getWorks();
+  const works = worksCache;
 
   const filtered = filter === 'all' ? works : works.filter(w => w.category === filter);
 
@@ -73,7 +89,7 @@ function renderWorks(filter = 'all') {
           <polygon points="23 7 16 12 23 17 23 7"/>
           <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
         </svg>
-        <p>No work items yet. Paste a YouTube or Instagram link above to add your first one!</p>
+        <p>No work items yet.${isAdmin ? ' Paste a YouTube or Instagram link above to add your first one!' : ''}</p>
       </div>
     `;
     return;
@@ -126,10 +142,11 @@ function renderWorks(filter = 'all') {
 }
 
 // === Add Work ===
-function addWork() {
+async function addWork() {
   const urlInput = document.getElementById('workUrl');
   const categoryInput = document.getElementById('workCategory');
   const titleInput = document.getElementById('workTitle');
+  const addBtn = document.getElementById('addWorkBtn');
 
   const url = urlInput.value.trim();
   if (!url) return;
@@ -140,8 +157,10 @@ function addWork() {
     return;
   }
 
-  const works = getWorks();
-  works.unshift({
+  addBtn.textContent = 'Saving...';
+  addBtn.disabled = true;
+
+  worksCache.unshift({
     url,
     title: titleInput.value.trim() || '',
     category: categoryInput.value,
@@ -149,19 +168,20 @@ function addWork() {
     addedAt: Date.now()
   });
 
-  saveWorks(works);
+  await saveWorks(worksCache);
   renderWorks(currentFilter);
 
+  addBtn.textContent = 'Add';
+  addBtn.disabled = false;
   urlInput.value = '';
   titleInput.value = '';
 }
 
-function deleteWork(event, index) {
+async function deleteWork(event, index) {
   event.stopPropagation();
   if (!confirm('Remove this work item?')) return;
-  const works = getWorks();
-  works.splice(index, 1);
-  saveWorks(works);
+  worksCache.splice(index, 1);
+  await saveWorks(worksCache);
   renderWorks(currentFilter);
 }
 
@@ -189,13 +209,14 @@ function closeModal() {
 let currentFilter = 'all';
 
 // === Init ===
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   // Show admin panel if ?edit=true
   if (isAdmin) {
     document.getElementById('adminPanel').style.display = '';
   }
 
-  // Render works
+  // Fetch works from cloud and render
+  await fetchWorks();
   renderWorks();
 
   // Add work button
