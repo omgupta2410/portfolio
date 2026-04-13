@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <!-- Nav -->
@@ -86,8 +86,10 @@
             <option value="vsl">VSL</option>
           </select>
           <input type="text" id="workTitle" placeholder="Title (optional)" class="work-input work-title-input">
+          <input type="text" id="workThumb" placeholder="Custom thumbnail URL (optional)" class="work-input work-title-input">
           <button id="addWorkBtn" class="btn btn-primary">Add</button>
         </div>
+        <p class="admin-hint">Thumbnail tip: Upload images to <code>thumbnails/</code> folder in your repo, then use <code>https://omgupta2410.github.io/portfolio/thumbnails/filename.jpg</code></p>
       </div>
 
       <!-- Work Grid -->
@@ -284,6 +286,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

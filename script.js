@@ -128,7 +128,7 @@ function renderWorks(filter = 'all') {
         <span class="work-card-source ${sourceClass}">${sourceLabel}</span>
         ${isAdmin ? `<button class="work-card-delete" onclick="deleteWork(event, ${i})">&times;</button>` : ''}
         <div class="work-card-thumb">
-          <img src="${work.videoData.thumbnail}" alt="${work.title || 'Video'}" loading="lazy"
+          <img src="${work.customThumb || work.videoData.thumbnail}" alt="${work.title || 'Video'}" loading="lazy"
                onerror="this.src='https://img.youtube.com/vi/${work.videoData.id}/hqdefault.jpg'">
           <div class="work-card-play"></div>
         </div>
@@ -146,6 +146,7 @@ async function addWork() {
   const urlInput = document.getElementById('workUrl');
   const categoryInput = document.getElementById('workCategory');
   const titleInput = document.getElementById('workTitle');
+  const thumbInput = document.getElementById('workThumb');
   const addBtn = document.getElementById('addWorkBtn');
 
   const url = urlInput.value.trim();
@@ -160,10 +161,13 @@ async function addWork() {
   addBtn.textContent = 'Saving...';
   addBtn.disabled = true;
 
+  const customThumb = thumbInput.value.trim() || '';
+
   worksCache.unshift({
     url,
     title: titleInput.value.trim() || '',
     category: categoryInput.value,
+    customThumb,
     videoData,
     addedAt: Date.now()
   });
@@ -175,6 +179,7 @@ async function addWork() {
   addBtn.disabled = false;
   urlInput.value = '';
   titleInput.value = '';
+  thumbInput.value = '';
 }
 
 async function deleteWork(event, index) {
