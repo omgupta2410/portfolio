@@ -290,6 +290,29 @@ body {
   padding: 100px 0;
 }
 
+.work-subtitle {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.work-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-lg {
+  padding: 18px 44px;
+  font-size: 1.1rem;
+  gap: 12px;
+}
+
+.btn-lg:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px var(--cyan-glow);
+}
+
 .work-filters {
   display: flex;
   justify-content: center;

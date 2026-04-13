@@ -65,39 +65,12 @@
   <section id="work" class="work">
     <div class="container">
       <h2 class="section-title">My <span class="gradient-text">Work</span></h2>
-
-      <!-- Category Filter -->
-      <div class="work-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="short-form">Short Form</button>
-        <button class="filter-btn" data-filter="long-form">Long Form</button>
-        <button class="filter-btn" data-filter="motion-graphics">Motion Graphics</button>
-        <button class="filter-btn" data-filter="podcast">Podcast</button>
-        <button class="filter-btn" data-filter="vsl">VSL</button>
-      </div>
-
-      <!-- Add New Work (only visible with ?edit=true) -->
-      <div class="add-work-section" id="adminPanel" style="display:none;">
-        <h3>Add New Work</h3>
-        <div class="add-work-form">
-          <input type="text" id="workUrl" placeholder="Paste YouTube or Instagram link here..." class="work-input">
-          <select id="workCategory" class="work-select">
-            <option value="short-form">Short Form</option>
-            <option value="long-form">Long Form</option>
-            <option value="motion-graphics">Motion Graphics</option>
-            <option value="podcast">Podcast</option>
-            <option value="vsl">VSL</option>
-          </select>
-          <input type="text" id="workTitle" placeholder="Title (optional)" class="work-input work-title-input">
-          <input type="text" id="workThumb" placeholder="Custom thumbnail URL (optional)" class="work-input work-title-input">
-          <button id="addWorkBtn" class="btn btn-primary">Add</button>
-        </div>
-        <p class="admin-hint">Thumbnail tip: Upload images to <code>thumbnails/</code> folder in your repo, then use <code>https://omgupta2410.github.io/portfolio/thumbnails/filename.jpg</code></p>
-      </div>
-
-      <!-- Work Grid -->
-      <div class="work-grid" id="workGrid">
-        <!-- Items will be populated by JS -->
+      <p class="work-subtitle">Check out my latest projects — short form, long form, motion graphics, podcasts, VSLs and more.</p>
+      <div class="work-cta">
+        <a href="https://www.canva.com/design/DAGgBcUJ4Go/qdwTWWc37HUn9XZ6fbRHuQ/edit?utm_content=DAGgBcUJ4Go&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          View My Portfolio
+        </a>
       </div>
     </div>
   </section>
@@ -280,20 +253,6 @@
     <p>&copy; 2026 Om Gupta. All rights reserved.</p>
   </footer>
 
-  <!-- Video Modal -->
-  <div class="video-modal" id="videoModal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <div class="modal-video" id="modalVideo"></div>
-    </div>
-  </div>
-
-  <script>
-    // Always load fresh script (no caching)
-    const s = document.createElement('script');
-    s.src = 'script.js?t=' + Date.now();
-    document.body.appendChild(s);
-  </script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
