@@ -7,15 +7,28 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Om Gupta | Video Editor & Motion Graphics Designer</title>
+  <link rel="icon" type="image/png" href="og-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- CRT Corner Crosshairs -->
+  <div class="crt-corner crt-corner--tl"></div>
+  <div class="crt-corner crt-corner--tr"></div>
+  <div class="crt-corner crt-corner--bl"></div>
+  <div class="crt-corner crt-corner--br"></div>
+  <div class="crt-cross crt-cross--top"></div>
+  <div class="crt-cross crt-cross--bottom"></div>
+
   <!-- Nav -->
   <nav class="navbar">
-    <a href="#hero" class="nav-logo">OM<span>.</span></a>
+    <a href="#hero" class="nav-logo"><img src="og-logo.png" alt="OG Visuals"></a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#work">Work</a>
@@ -30,7 +43,9 @@
 
   <!-- Hero -->
   <section id="hero" class="hero">
-    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-blob hero-blob-1"></div>
+    <div class="hero-bg-blob hero-blob-2"></div>
+    <div class="hero-bg-blob hero-blob-3"></div>
     <div class="hero-content">
       <div class="hero-text">
         <p class="hero-greeting">Hey!</p>
@@ -44,19 +59,75 @@
       </div>
       <div class="hero-image">
         <div class="hero-image-ring"></div>
-        <img src="profile.jpg" alt="Om Gupta" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+        <img src="profile.png" alt="Om Gupta" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- Skills Marquee -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Video Editing</span><span class="marquee-dot">&#10022;</span>
+        <span>Motion Graphics</span><span class="marquee-dot">&#10022;</span>
+        <span>VFX</span><span class="marquee-dot">&#10022;</span>
+        <span>Color Grading</span><span class="marquee-dot">&#10022;</span>
+        <span>Podcast Production</span><span class="marquee-dot">&#10022;</span>
+        <span>Ad Films</span><span class="marquee-dot">&#10022;</span>
+        <span>VSL</span><span class="marquee-dot">&#10022;</span>
+        <span>UGC Ads</span><span class="marquee-dot">&#10022;</span>
+        <span>Social Media</span><span class="marquee-dot">&#10022;</span>
+        <span>Live Streaming</span><span class="marquee-dot">&#10022;</span>
+        <span>Thumbnails</span><span class="marquee-dot">&#10022;</span>
+        <span>Content Strategy</span><span class="marquee-dot">&#10022;</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>Video Editing</span><span class="marquee-dot">&#10022;</span>
+        <span>Motion Graphics</span><span class="marquee-dot">&#10022;</span>
+        <span>VFX</span><span class="marquee-dot">&#10022;</span>
+        <span>Color Grading</span><span class="marquee-dot">&#10022;</span>
+        <span>Podcast Production</span><span class="marquee-dot">&#10022;</span>
+        <span>Ad Films</span><span class="marquee-dot">&#10022;</span>
+        <span>VSL</span><span class="marquee-dot">&#10022;</span>
+        <span>UGC Ads</span><span class="marquee-dot">&#10022;</span>
+        <span>Social Media</span><span class="marquee-dot">&#10022;</span>
+        <span>Live Streaming</span><span class="marquee-dot">&#10022;</span>
+        <span>Thumbnails</span><span class="marquee-dot">&#10022;</span>
+        <span>Content Strategy</span><span class="marquee-dot">&#10022;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About + Stats (merged) -->
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-      <div class="about-content">
-        <p>Hey, I'm <strong>Om Gupta</strong> — a <strong>video editor</strong>, <strong>motion graphic designer</strong>, and <strong>content strategist</strong> with over 3 years of experience helping brands tell their story through video.</p>
-        <p>I edit everything from <strong>short-form reels</strong> and <strong>podcasts</strong> to <strong>ad films</strong>, <strong>VSLs</strong>, and <strong>brand films</strong>. I also work on <strong>UGC-style ads</strong>, <strong>thumbnails</strong>, and <strong>content repurposing</strong> — basically, if it's video, I've got you covered.</p>
-        <p>I've worked with brands like Shoppers Stop, Trove Experiences, Truffle Nation, and many more. Whether you need a scroll-stopping reel or a full video strategy, I'm here to make it happen. <strong>Let's work together!</strong></p>
+      <div class="about-split">
+        <div class="about-left">
+          <h2 class="section-title" style="text-align:left;margin-bottom:24px;">About <span class="gradient-text">Me</span></h2>
+          <p>I'm <strong>Om Gupta</strong> — a video editor, motion graphic designer, and content strategist with over 3 years of experience helping brands tell their story through video.</p>
+          <p>From short-form reels and podcasts to ad films, VSLs, and brand films — if it's video, I've got you covered.</p>
+          <p>I've worked with brands like <strong>Shoppers Stop</strong>, <strong>Trove Experiences</strong>, <strong>Truffle Nation</strong>, and many more.</p>
+        </div>
+        <div class="about-right">
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+              <p class="stat-label">Years</p>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+              <p class="stat-label">Clients</p>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+              <p class="stat-label">Tools</p>
+            </div>
+            <div class="about-stat">
+              <span class="stat-number">&infin;</span>
+              <p class="stat-label">Frames</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -66,46 +137,261 @@
     <div class="container">
       <h2 class="section-title">My <span class="gradient-text">Work</span></h2>
       <p class="work-subtitle">Check out my latest projects — short form, long form, motion graphics, podcasts, VSLs and more.</p>
-      <div class="work-cta">
-        <a href="https://www.canva.com/design/DAGgBcUJ4Go/qdwTWWc37HUn9XZ6fbRHuQ/edit?utm_content=DAGgBcUJ4Go&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn btn-primary btn-lg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          View My Portfolio
-        </a>
+      <div class="work-filters">
+        <button class="filter-btn active" data-filter="ai-ad">AI Ads</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="podcast">Podcast</button>
+        <button class="filter-btn" data-filter="ugc">UGC</button>
+        <button class="filter-btn" data-filter="vsl">VSL</button>
+        <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+      </div>
+      <div class="work-grid" id="workGrid">
+        <!-- AI Ads -->
+        <div class="work-card" data-category="ai-ad" data-video="Work/AI Ad/compressed/FERTILISER.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/FERTILISER.jpg" alt="Fertiliser AI Ad" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Fertiliser</p>
+            <p class="work-card-category">AI Ad</p>
+          </div>
+        </div>
+        <div class="work-card" data-category="ai-ad" data-video="Work/AI Ad/compressed/LIGNIN.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/LIGNIN.jpg" alt="Lignin AI Ad" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Lignin</p>
+            <p class="work-card-category">AI Ad</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="ai-ad" data-video="Work/AI Ad/compressed/THAR Final rev.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/THAR_Final_rev.jpg" alt="Thar AI Ad" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Thar</p>
+            <p class="work-card-category">AI Ad</p>
+          </div>
+        </div>
+        <!-- Events -->
+        <div class="work-card work-card--vertical" data-category="events" data-video="Work/Events/compressed/Coffee_Experience_Trove_experiences.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/Coffee_Experience_Trove_experiences.jpg" alt="Coffee Experience" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Coffee Experience — Trove</p>
+            <p class="work-card-category">Events</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="events" data-video="Work/Events/compressed/Pasta_trove_experiences.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/Pasta_trove_experiences.jpg" alt="Pasta Experience" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Pasta Experience — Trove</p>
+            <p class="work-card-category">Events</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="events" data-video="Work/Events/compressed/Shoppers_Stop_X_Only_experience.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/Shoppers_Stop_X_Only_experience.jpg" alt="Shoppers Stop Experience" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Shoppers Stop x Only</p>
+            <p class="work-card-category">Events</p>
+          </div>
+        </div>
+        <!-- Podcast -->
+        <div class="work-card" data-category="podcast" data-video="Work/Podcast/compressed/He_Built_an_Iconic_Cafe_from_a_Chai_Thela_-_Untold_Story_of_Jug_Mug_thela_[R4H5zYz0ef8]_0-00_1-18.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/He_Built_an_Iconic_Cafe_from_a_Chai_Thela_-_Untold_Story_of_Jug_Mug_thela_[R4H5zYz0ef8]_0-00_1-18.jpg" alt="Jug Mug Thela Podcast" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Jug Mug Thela — Untold Story</p>
+            <p class="work-card-category">Podcast</p>
+          </div>
+        </div>
+        <div class="work-card" data-category="podcast" data-video="Work/Podcast/compressed/How_One_Indian_Chef_Sells_Chocolate_in_USA_UK_and_Europe_[0zHlstsfRF4]_0-00_1-28.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/How_One_Indian_Chef_Sells_Chocolate_in_USA_UK_and_Europe_[0zHlstsfRF4]_0-00_1-28.jpg" alt="Indian Chef Chocolate" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Indian Chef Sells Chocolate Globally</p>
+            <p class="work-card-category">Podcast</p>
+          </div>
+        </div>
+        <div class="work-card" data-category="podcast" data-video="Work/Podcast/compressed/How_to_Build_a_Profitable_Home_Bakery_in_2026_[xBSIOx44Xrc]_0-50.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/How_to_Build_a_Profitable_Home_Bakery_in_2026_[xBSIOx44Xrc]_0-50.jpg" alt="Home Bakery" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Build a Profitable Home Bakery</p>
+            <p class="work-card-category">Podcast</p>
+          </div>
+        </div>
+        <div class="work-card" data-category="podcast" data-video="Work/Podcast/compressed/How_to_Earn_as_a_Pastry_Chef_in_London_[jRlxJ1wV1mw]_0-00_1-30.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/How_to_Earn_as_a_Pastry_Chef_in_London_[jRlxJ1wV1mw]_0-00_1-30.jpg" alt="Pastry Chef London" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Earn as a Pastry Chef in London</p>
+            <p class="work-card-category">Podcast</p>
+          </div>
+        </div>
+        <div class="work-card" data-category="podcast" data-video="Work/Podcast/compressed/Melthouse.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/Melthouse.jpg" alt="Melthouse" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Melthouse</p>
+            <p class="work-card-category">Podcast</p>
+          </div>
+        </div>
+        <div class="work-card" data-category="podcast" data-video="Work/Podcast/compressed/The_Most_Unique_Cafe_in_India_And_the_Story_Behind_It_[1nfVFPp2-BI]_0-00_1-07.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/The_Most_Unique_Cafe_in_India_And_the_Story_Behind_It_[1nfVFPp2-BI]_0-00_1-07.jpg" alt="Unique Cafe India" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Most Unique Cafe in India</p>
+            <p class="work-card-category">Podcast</p>
+          </div>
+        </div>
+        <!-- UGC -->
+        <div class="work-card work-card--vertical" data-category="ugc" data-video="Work/UGC/compressed/UGC.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/UGC.jpg" alt="UGC Ad" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">UGC Ad</p>
+            <p class="work-card-category">UGC</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="ugc" data-video="Work/UGC/compressed/grx-sanajana-draft-2.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/grx-sanajana-draft-2.jpg" alt="GRX Sanajana" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">GRX Sanajana</p>
+            <p class="work-card-category">UGC</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="ugc" data-video="Work/UGC/compressed/scapia format.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/scapia_format.jpg" alt="Scapia" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Scapia</p>
+            <p class="work-card-category">UGC</p>
+          </div>
+        </div>
+        <!-- VSL -->
+        <div class="work-card work-card--vertical" data-category="vsl" data-video="Work/VSL/compressed/6 week vsl eng.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/6_week_vsl_eng.jpg" alt="6 Week VSL" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">6 Week VSL</p>
+            <p class="work-card-category">VSL</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="vsl" data-video="Work/VSL/compressed/AD_1_eng.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/AD_1_eng.jpg" alt="Ad 1" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Ad Film</p>
+            <p class="work-card-category">VSL</p>
+          </div>
+        </div>
+        <!-- Motion Graphics -->
+        <div class="work-card work-card--square" data-category="motion" data-video="Work/Motion/compressed/3 Cut logo Animation.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/3_Cut_logo_Animation.jpg" alt="Logo Animation" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">3 Cut Logo Animation</p>
+            <p class="work-card-category">Motion Graphics</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="motion" data-video="Work/Motion/compressed/pubg.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/pubg.jpg" alt="PUBG Motion" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">PUBG</p>
+            <p class="work-card-category">Motion Graphics</p>
+          </div>
+        </div>
+        <div class="work-card work-card--vertical" data-category="motion" data-video="Work/Motion/compressed/Zakir final.mp4">
+          <div class="work-card-thumb">
+            <img src="thumbnails/work/Zakir_final.jpg" alt="Zakir Motion" loading="lazy">
+            <div class="work-card-play"></div>
+          </div>
+          <div class="work-card-info">
+            <p class="work-card-title">Zakir</p>
+            <p class="work-card-category">Motion Graphics</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <video id="modalVideo" controls controlsList="nodownload" disablePictureInPicture oncontextmenu="return false;">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
   <!-- Clients -->
   <section id="clients" class="clients">
     <div class="container">
-      <h2 class="section-title">I <span class="gradient-text">Worked</span> With</h2>
-      <div class="clients-grid">
-        <div class="client-logo">
-          <img src="logos/shoppers-stop.png" alt="Shoppers Stop">
-        </div>
-        <div class="client-logo">
-          <img src="logos/wesocializeU.jpg" alt="WeSocializeU">
-        </div>
-        <div class="client-logo dark-bg">
-          <img src="logos/lidoma.png" alt="Lidoma">
-        </div>
-        <div class="client-logo">
-          <img src="logos/trove-experiences.png" alt="Trove Experiences">
-        </div>
-        <div class="client-logo">
-          <img src="logos/truffle-nation.png" alt="Truffle Nation">
-        </div>
-        <div class="client-logo">
-          <img src="logos/Makeup by naishaa.jpg" alt="Makeup by Naishaa">
-        </div>
-        <div class="client-logo">
-          <img src="logos/QiBLOCKS.png" alt="QiBLOCKS">
-        </div>
-        <div class="client-logo dark-bg">
-          <img src="logos/Tenstorrent_W.png" alt="Tenstorrent">
-        </div>
-        <div class="client-logo dark-bg">
-          <img src="logos/scapia.png" alt="Scapia">
+      <p class="clients-label">Trusted by brands like</p>
+      <div class="clients-slider">
+        <div class="clients-track">
+          <div class="client-chip client-chip--wide"><img src="logos/shoppers-stop.png" alt="Shoppers Stop"></div>
+          <div class="client-chip"><img src="logos/wesocializeU.jpg" alt="WeSocializeU"></div>
+          <div class="client-chip"><img src="logos/lidoma.png" alt="Lidoma"></div>
+          <div class="client-chip"><img src="logos/trove-experiences.png" alt="Trove Experiences"></div>
+          <div class="client-chip"><img src="logos/truffle-nation.png" alt="Truffle Nation"></div>
+          <div class="client-chip"><img src="logos/Makeup by naishaa.jpg" alt="Makeup by Naishaa"></div>
+          <div class="client-chip"><img src="logos/QiBLOCKS.png" alt="QiBLOCKS"></div>
+          <div class="client-chip"><img src="logos/Tenstorrent_W.png" alt="Tenstorrent"></div>
+          <div class="client-chip"><img src="logos/scapia.png" alt="Scapia"></div>
+          <!-- duplicate for seamless loop -->
+          <div class="client-chip client-chip--wide"><img src="logos/shoppers-stop.png" alt="Shoppers Stop"></div>
+          <div class="client-chip"><img src="logos/wesocializeU.jpg" alt="WeSocializeU"></div>
+          <div class="client-chip"><img src="logos/lidoma.png" alt="Lidoma"></div>
+          <div class="client-chip"><img src="logos/trove-experiences.png" alt="Trove Experiences"></div>
+          <div class="client-chip"><img src="logos/truffle-nation.png" alt="Truffle Nation"></div>
+          <div class="client-chip"><img src="logos/Makeup by naishaa.jpg" alt="Makeup by Naishaa"></div>
+          <div class="client-chip"><img src="logos/QiBLOCKS.png" alt="QiBLOCKS"></div>
+          <div class="client-chip"><img src="logos/Tenstorrent_W.png" alt="Tenstorrent"></div>
+          <div class="client-chip"><img src="logos/scapia.png" alt="Scapia"></div>
         </div>
       </div>
     </div>
@@ -114,87 +400,47 @@
   <!-- Services -->
   <section id="services" class="services">
     <div class="container">
-      <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
-      <div class="services-grid">
-        <!-- 1. Video Editing -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-          </div>
-          <h3>Video Editing</h3>
-          <p>Professional editing for short-form & long-form content — polished cuts, color grading, and seamless storytelling.</p>
+      <h2 class="section-title">What I <span class="gradient-text">Do</span></h2>
+      <div class="services-compact">
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          <span>Video Editing</span>
         </div>
-        <!-- 2. Motion Graphics & VFX -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3>Motion Graphics & VFX</h3>
-          <p>Logo animations, intros/outros, lower thirds, kinetic typography, and eye-catching visual effects.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <span>Motion Graphics & VFX</span>
         </div>
-        <!-- 3. Podcast Production -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-          </div>
-          <h3>Podcast Production</h3>
-          <p>Multi-camera editing, dynamic captions, engaging visual overlays, and full audio-visual polish.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          <span>Podcast Production</span>
         </div>
-        <!-- 4. Ad Films & Commercials -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>Ad Films & Commercials</h3>
-          <p>High-impact Facebook, Instagram & YouTube ad creatives and product videos that convert viewers into buyers.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Ad Films & VSL</span>
         </div>
-        <!-- 5. VSL Production -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-          </div>
-          <h3>VSL Production</h3>
-          <p>High-converting Video Sales Letters designed for funnels & landing pages that drive sales and revenue.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>UGC Ads</span>
         </div>
-        <!-- 6. Social Media Content -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-          </div>
-          <h3>Social Media Content</h3>
-          <p>Platform-optimized Reels, Shorts & TikToks — scroll-stopping vertical content tailored for each platform.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          <span>Social Media</span>
         </div>
-        <!-- 7. UGC-Style Ad Editing -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>UGC-Style Ad Editing</h3>
-          <p>Transforming raw UGC footage into authentic, scroll-stopping ads that feel native to the platform.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          <span>Event & Brand Films</span>
         </div>
-        <!-- 8. Event & Brand Films -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-          </div>
-          <h3>Event & Brand Films</h3>
-          <p>Corporate events, brand stories, and cinematic experience videos that capture the essence of your brand.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Thumbnails & Design</span>
         </div>
-        <!-- 9. Thumbnail & Creative Design -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-          <h3>Thumbnail & Creative Design</h3>
-          <p>Click-worthy YouTube thumbnails, ad creatives, and banners designed to maximize CTR and engagement.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+          <span>Content Repurposing</span>
         </div>
-        <!-- 10. Content Strategy & Repurposing -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
-          </div>
-          <h3>Content Strategy & Repurposing</h3>
-          <p>Turn 1 long video into 10+ clips — smart repurposing across YouTube, Instagram, TikTok & LinkedIn.</p>
+        <div class="svc-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M7.76 16.24a6 6 0 0 1 0-8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>
+          <span>Live Streaming</span>
         </div>
       </div>
     </div>
@@ -203,28 +449,18 @@
   <!-- Tools -->
   <section id="tools" class="tools">
     <div class="container">
-      <h2 class="section-title">Known <span class="gradient-text">Software</span> & AI Tools</h2>
-      <div class="tools-container">
-        <div class="tools-group">
-          <h3>Software</h3>
-          <div class="tools-list">
-            <div class="tool-item"><span class="tool-badge pr">Pr</span>Premiere Pro</div>
-            <div class="tool-item"><span class="tool-badge ae">Ae</span>After Effects</div>
-            <div class="tool-item"><span class="tool-badge ps">Ps</span>Photoshop</div>
-          </div>
-        </div>
-        <div class="tools-group">
-          <h3>AI Tools</h3>
-          <div class="tools-list">
-            <div class="tool-item"><span class="tool-badge ai">AI</span>Sora</div>
-            <div class="tool-item"><span class="tool-badge ai">AI</span>ChatGPT</div>
-            <div class="tool-item"><span class="tool-badge ai">AI</span>Claude</div>
-            <div class="tool-item"><span class="tool-badge ai">AI</span>Kling AI</div>
-            <div class="tool-item"><span class="tool-badge ai">AI</span>Freepik Spaces</div>
-            <div class="tool-item"><span class="tool-badge ai">AI</span>Higgsfield</div>
-            <div class="tool-item"><span class="tool-badge ai">AI</span>LumaLabs</div>
-          </div>
-        </div>
+      <h2 class="section-title">My <span class="gradient-text">Toolkit</span></h2>
+      <div class="tools-pills">
+        <span class="tool-pill tool-pill--software">Premiere Pro</span>
+        <span class="tool-pill tool-pill--software">After Effects</span>
+        <span class="tool-pill tool-pill--software">Photoshop</span>
+        <span class="tool-pill tool-pill--ai">Sora</span>
+        <span class="tool-pill tool-pill--ai">ChatGPT</span>
+        <span class="tool-pill tool-pill--ai">Claude</span>
+        <span class="tool-pill tool-pill--ai">Kling AI</span>
+        <span class="tool-pill tool-pill--ai">Freepik Spaces</span>
+        <span class="tool-pill tool-pill--ai">Higgsfield</span>
+        <span class="tool-pill tool-pill--ai">LumaLabs</span>
       </div>
     </div>
   </section>
@@ -256,6 +492,6 @@
     <p>&copy; 2026 Om Gupta. All rights reserved.</p>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
